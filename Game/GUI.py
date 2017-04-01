@@ -1,6 +1,6 @@
 def printField(matrix):
-    for x in matrix[0:]:
+    for row in matrix[0:]:
         line = '| '
-        for y in x[0:]:
-            line += str(y) + ' | '
+        for char in row[0:]:
+            line += str(char) + ' | '
         print(line)
