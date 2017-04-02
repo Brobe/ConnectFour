@@ -65,5 +65,41 @@ def gameover(player, field):
         else:
             inARow = 0
 
+
     #Diagonal rising
+    #1. colum iteration
+    inARow = 0
+    for index in range(0, w-4):
+        for colindex in range(1, w-index):
+            if(inARow == 4):
+                return True
+            if(field[h-colindex][colindex+index] == player.marker):
+                inARow += 1
+                if(inARow == 4):
+                    return True
+            else:
+                inARow = 0
+    #2. row iteration
+    inARow = 0
+    for index in range(3,h-1):
+        for rowindex in range(0,index+1):
+            if (inARow == 4):
+                return True
+            if (field[index-rowindex][rowindex] == player.marker):
+                inARow += 1
+                if (inARow == 4):
+                    return True
+            else:
+                inARow = 0
+    #3. for [n][n] being the same value
+    inARow = 0
+    for index in range(h):
+        if (inARow == 4):
+            return True
+        if (field[(h-1)-index][index] == player.marker):
+            inARow += 1
+            if (inARow == 4):
+                return True
+        else:
+            inARow = 0
     return False
