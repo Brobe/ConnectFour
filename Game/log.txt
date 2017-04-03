@@ -1,0 +1,33 @@
+Player w chose 1
+Player w chose 1
+Player w chose 1
+Player w chose 2
+Player w chose 2
+Player w chose 3
+Player w chose 4
+Player w chose 1
+Player w chose 1
+Player w chose 1
+Player w chose 1
+Player w chose 1
+Player w chose 1
+Player w chose 1
+Player w chose 1
+Player w wins!Player w chose 1
+Player loser chose 2
+Player w chose 1
+Player loser chose 3
+Player w chose 2
+Player loser chose 4
+Player w chose 4
+Player loser chose 5
+Player loser wins!Player w chose 1
+Player w chose 1
+Player w chose 1
+Player w chose 1
+Player w wins!
+Player w chose 1
+Player w chose 1
+Player w chose 1
+Player w chose 1
+Player w wins!

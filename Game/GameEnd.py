@@ -32,7 +32,7 @@ def gameover(player, field):
     #1. colum iteration
     for colindex in range(1,w-4):
         inARow = 0
-        for index in range(h-(colindex-1)):
+        for index in range(h-colindex-1):
             if (inARow == 4):
                 return True
             if(field[index][colindex+index] == player.marker):
