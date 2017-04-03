@@ -7,7 +7,7 @@ players = [] #All players in this list will be in the game
 # Method for one round of the game. It will check if the colum has been filled or if the input is not correct.
 #when the round is almost complete it writes to the logfile.
 def round(player, field, file):
-    incol = int(input("Player " + player.name + "s (" + player.marker + ") turn!\nWhere would you want to place your brick? (choose a value between 1 and " + str(len(field)) + ")\n")) - 1
+    incol = int(raw_input("Player " + player.name + "s (" + player.marker + ") turn!\nWhere would you want to place your brick? (choose a value between 1 and " + str(len(field)) + ")\n")) - 1
 
     if(incol > len(field)):
         print("That value can not be chosen.")
@@ -46,7 +46,7 @@ def run():
 
     print("Player "+highscorename+" has won "+str(highscoretimes)+" times!")
 
-    infield = input("How big do you want the playfield (for example 7x6)\n")
+    infield = raw_input("How big do you want the playfield (for example 7x6)\n")
     w = int(infield.split('x')[0]) #width of the playfield
     h = int(infield.split('x')[1]) #height of the playfield
 
@@ -55,12 +55,12 @@ def run():
     movesdone = 0
 
     playField = [[0 for col in range(w)] for row in range(h)]
-    inplayers = input("How many players will be playing?\n")
+    inplayers = raw_input("How many players will be playing?\n")
 
     #Getting the name and what marker the player want and then creating the players.
     for index in range(0,int(inplayers)):
-        playername = input("Name of player #"+str(index+1)+"?\n")
-        playermarker = input("What marker does "+str(playername)+" want?\n")
+        playername = raw_input("Name of player #"+str(index+1)+"?\n")
+        playermarker = raw_input("What marker does "+str(playername)+" want?\n")
         if(playermarker == '0'):
             print("You can not chose that marker")
             return run()
@@ -83,7 +83,7 @@ def run():
         if(GameEnd.gameover(players[playerturn], playField)):
             break
         if (movesdone > totalmoves-1):
-            incon = input("No moves left, do you want to play again? (Y/N)")
+            incon = raw_input("No moves left, do you want to play again? (Y/N)")
             if(incon == "y"):
                 run()
             else:
