@@ -14,7 +14,7 @@ def round(player, field, file):
         return round(player, field)
     if(field[0][incol] != 0):
         print("Already chosen, try again")
-        return round(player, field)
+        return round(player, field, file)
     for row in field[::-1]:
         if(row[incol] == 0):
             row[incol] = player.marker
